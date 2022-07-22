@@ -12,12 +12,14 @@ int main(void)
 {
     /* Replace with your application code */
 	DDRB=(1<<PB5);
+	DDRC=0b1111111;
     while (1) 
     {
 		PORTB=1<<PB5;
 		_delay_ms(3000);
 		PORTB=~(1<<PB5);
 		_delay_ms(3000);
+		PORTC=0b1111111;
 		
     }
 }

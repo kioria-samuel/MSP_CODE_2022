@@ -4,7 +4,7 @@
  * Created: 4/29/2022 9:32:47 PM
  * Author : kioria
  */ 
-
+//#define F_CPU 16000000UL
 #include <avr/io.h>
 #include "i2c.h"
 #include "LCD_I2C.h"
@@ -15,7 +15,7 @@ int main(void)
     /* Replace with your application code */
 	i2c_init();
 	i2c_start();
-	i2c_write(0x70);
+	i2c_write(0x70);//pclcd  address
 	lcd_init();//lcd initialize
     while (1) 
     {

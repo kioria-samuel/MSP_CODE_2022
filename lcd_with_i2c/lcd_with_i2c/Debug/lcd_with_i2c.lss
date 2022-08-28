@@ -21,11 +21,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   8 .debug_frame  00000110  00000000  00000000  00001ba8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000003a4  00000000  00000000  00001cb8  2**0
+  9 .debug_str    000003ad  00000000  00000000  00001cb8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000001c2  00000000  00000000  0000205c  2**0
+ 10 .debug_loc    000001c2  00000000  00000000  00002065  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000078  00000000  00000000  0000221e  2**0
+ 11 .debug_ranges 00000078  00000000  00000000  00002227  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -402,7 +402,7 @@ int main(void)
  312:	0e 94 4b 00 	call	0x96	; 0x96 <i2c_init>
 	i2c_start();
  316:	0e 94 54 00 	call	0xa8	; 0xa8 <i2c_start>
-	i2c_write(0x70);
+	i2c_write(0x70);//pclcd  address
  31a:	80 e7       	ldi	r24, 0x70	; 112
  31c:	0e 94 5d 00 	call	0xba	; 0xba <i2c_write>
 	lcd_init();//lcd initialize
